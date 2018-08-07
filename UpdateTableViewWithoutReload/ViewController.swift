@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
     self.myTBV.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        arrData = ["A","B","C","D","E","F","G","H","I","J"];
+        arrData = ["AB","BC","CD","DE","EF","FG","GH","HI","IJ","JK","AB","BC","CD","DE","EF","FG","GH","HI","IJ","JK","AB","BC","CD","DE","EF","FG","GH","HI","IJ","JK","AB","BC","CD","DE","EF","FG","GH","HI","IJ","JK"]
         
        
         // Do any additional setup after loading the view, typically from a nib.
@@ -32,7 +32,6 @@ class ViewController: UIViewController {
         let cell = myTBV.cellForRow(at: index)
         
         cell?.textLabel?.text = nameTF.text
-        
     }
     @IBAction func updateTap(_ sender: Any) {
         
@@ -47,8 +46,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
-    
     
 }
 
@@ -56,6 +53,7 @@ extension ViewController : UITableViewDelegate,UITableViewDataSource
 {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return arrData.count
+        
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
